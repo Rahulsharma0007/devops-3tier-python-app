@@ -32,20 +32,20 @@ jobs:
 
       - name: Build backend Docker image
         run: |
-          docker build -t devops-3tier-backend:test ./backend
+          docker build -t devops-3tier-backend ./backend
 
       - name: Push backend image
         run: |
           docker push \
-            ${{ secrets.DOCKERHUB_USERNAME }}/devops-3tier-backend:test:latest    
+            ${{ secrets.DOCKERHUB_USERNAME }}/devops-3tier-backend:latest    
 
       
 
       - name: Build frontend Docker image
         run: |
-          docker build -t devops-3tier-frontend:test ./frontend
+          docker build -t devops-3tier-frontend ./frontend
 
       - name: Push frontend image
         run: |
           docker push \
-            ${{ secrets.DOCKERHUB_USERNAME }}/devops-3tier-frontend:test:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/devops-3tier-frontend:latest
