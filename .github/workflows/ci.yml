@@ -37,7 +37,7 @@ jobs:
       - name: Push backend image
         run: |
           docker push \
-            ${{ secrets.DOCKERHUB_USERNAME }}/myapp-backend:latest    
+            ${{ secrets.DOCKERHUB_USERNAME }}/devops-3tier-backend:test:latest    
 
       
 
@@ -48,4 +48,4 @@ jobs:
       - name: Push frontend image
         run: |
           docker push \
-            ${{ secrets.DOCKERHUB_USERNAME }}/myapp-frontend:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/devops-3tier-frontend:test:latest
